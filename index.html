@@ -5,123 +5,111 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Port Status Portal</title>
+    <title>File Protection Utility</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+    <!-- Navigation -->
+
     <nav class="navbar">
-        <h2>🛡 Port Status Portal</h2>
+
+        <h2>🔐 FileGuard</h2>
 
         <div>
             <a href="#home">Home</a>
-            <a href="#checker">Port Checker</a>
+            <a href="#protect">Protect File</a>
             <a href="#about">About</a>
         </div>
+
     </nav>
 
 
+    <!-- Homepage -->
+
     <section class="hero" id="home">
 
-        <h1>Port Status Portal</h1>
+        <h1>File Protection Utility</h1>
 
-        <h2>Monitor Network Port Information</h2>
+        <h2>Secure Your Important Files</h2>
 
         <p>
-            Understand network port status and learn about
-            common network services.
+            Protect your personal files using
+            password-based encryption.
         </p>
 
-        <a href="#checker" class="btn">Explore Ports</a>
+        <a href="#protect" class="btn">
+            Get Started
+        </a>
 
     </section>
 
 
-    <section class="checker" id="checker">
+    <!-- File Protection Section -->
 
-        <h2>Port Information Checker</h2>
+    <section class="protect" id="protect">
 
-        <p>Enter a port number to view its service information.</p>
+        <div class="box">
 
-        <input
-            type="number"
-            id="port"
-            placeholder="Enter port number (0-65535)"
-            min="0"
-            max="65535"
-        >
+            <h2>File Security Center</h2>
 
-        <button onclick="checkPort()">Check Port</button>
+            <p>Select a file and choose an operation.</p>
 
-        <div id="result"></div>
+            <label>Select Your File</label>
 
-    </section>
+            <input type="file" id="fileInput">
 
+            <label>Enter Password</label>
 
-    <section class="table-section">
+            <input
+                type="password"
+                id="password"
+                placeholder="Enter a password"
+                autocomplete="off"
+            >
 
-        <h2>Common Network Ports</h2>
+            <div class="buttons">
 
-        <table>
+                <button onclick="encryptFile()">
+                    Encrypt File
+                </button>
 
-            <tr>
-                <th>Port</th>
-                <th>Service</th>
-                <th>Purpose</th>
-            </tr>
+                <button onclick="decryptFile()">
+                    Decrypt File
+                </button>
 
-            <tr>
-                <td>21</td>
-                <td>FTP</td>
-                <td>File Transfer</td>
-            </tr>
+            </div>
 
-            <tr>
-                <td>22</td>
-                <td>SSH</td>
-                <td>Secure Remote Login</td>
-            </tr>
+            <div id="result"></div>
 
-            <tr>
-                <td>25</td>
-                <td>SMTP</td>
-                <td>Email Transfer</td>
-            </tr>
-
-            <tr>
-                <td>80</td>
-                <td>HTTP</td>
-                <td>Web Traffic</td>
-            </tr>
-
-            <tr>
-                <td>443</td>
-                <td>HTTPS</td>
-                <td>Secure Web Traffic</td>
-            </tr>
-
-        </table>
+        </div>
 
     </section>
 
+
+    <!-- About -->
 
     <section class="about" id="about">
 
         <h2>About Our Project</h2>
 
         <p>
-            Port Status Portal is a cybersecurity educational
-            application designed to explain network ports,
-            their services and their importance in network security.
+            File Protection Utility is a cybersecurity
+            application designed to protect files through
+            encryption and password-based security.
         </p>
 
     </section>
 
 
+    <!-- Footer -->
+
     <footer>
-        © 2026 Port Status Portal | Cybersecurity Project
+
+        <p>© 2026 FileGuard | Cybersecurity Project</p>
+
     </footer>
 
 

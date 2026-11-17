@@ -10,7 +10,7 @@ body {
     color: white;
 }
 
-/* Navbar */
+/* Navigation */
 
 .navbar {
     display: flex;
@@ -35,7 +35,11 @@ body {
 .hero {
     text-align: center;
     padding: 100px 20px;
-    background: linear-gradient(135deg, #071426, #10466b);
+    background: linear-gradient(
+        135deg,
+        #071426,
+        #10466b
+    );
 }
 
 .hero h1 {
@@ -51,79 +55,83 @@ body {
 .hero p {
     color: #c5d2e0;
     margin-bottom: 30px;
+    line-height: 1.6;
 }
 
 .btn {
     display: inline-block;
+    padding: 14px 30px;
     background: #00aaff;
     color: white;
-    padding: 14px 30px;
-    border-radius: 8px;
     text-decoration: none;
+    border-radius: 8px;
 }
 
-/* Checker */
+/* Protection Section */
 
-.checker {
+.protect {
+    padding: 80px 20px;
     text-align: center;
-    padding: 70px 20px;
 }
 
-.checker h2 {
+.box {
+    max-width: 500px;
+    margin: auto;
+    padding: 35px;
+    background: #10243d;
+    border-radius: 15px;
+    border: 1px solid #31516e;
+}
+
+.box h2 {
     color: #00c8ff;
     margin-bottom: 15px;
 }
 
-.checker input {
+.box p {
+    color: #c5d2e0;
+    margin-bottom: 25px;
+}
+
+.box label {
     display: block;
-    width: 50%;
-    margin: 25px auto;
-    padding: 15px;
+    text-align: left;
+    margin: 15px 0 10px;
+}
+
+.box input {
+    width: 100%;
+    padding: 14px;
+    background: #071426;
+    color: white;
+    border: 1px solid #31516e;
     border-radius: 8px;
-    border: none;
+}
+
+.buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
 }
 
 button {
+    flex: 1;
+    padding: 14px;
     background: #00aaff;
     color: white;
     border: none;
-    padding: 14px 30px;
     border-radius: 8px;
     cursor: pointer;
 }
 
-#result {
-    margin: 25px auto;
-    max-width: 500px;
-    line-height: 1.8;
-}
-
-/* Table */
-
-.table-section {
-    padding: 60px 20px;
-    text-align: center;
-    background: #10243d;
-}
-
-.table-section h2 {
-    color: #00c8ff;
-    margin-bottom: 25px;
-}
-
-table {
-    width: 80%;
-    margin: auto;
-    border-collapse: collapse;
-}
-
-th, td {
-    padding: 15px;
-    border: 1px solid #31516e;
-}
-
-th {
+button:hover {
     background: #0077cc;
+}
+
+#result {
+    margin-top: 25px;
+    line-height: 1.8;
+    overflow-wrap: anywhere;
 }
 
 /* About */
@@ -131,6 +139,7 @@ th {
 .about {
     text-align: center;
     padding: 70px 20px;
+    background: #10243d;
 }
 
 .about h2 {
@@ -139,6 +148,8 @@ th {
 }
 
 .about p {
+    max-width: 700px;
+    margin: auto;
     line-height: 1.8;
     color: #c5d2e0;
 }
@@ -148,10 +159,10 @@ th {
 footer {
     text-align: center;
     padding: 25px;
-    background: #10243d;
+    background: #071426;
 }
 
-/* Mobile */
+/* Responsive */
 
 @media(max-width: 600px) {
 
@@ -164,11 +175,12 @@ footer {
         margin: 7px;
     }
 
-    .checker input {
-        width: 90%;
+    .hero h1 {
+        font-size: 30px;
     }
 
-    table {
-        width: 100%;
+    .buttons {
+        flex-direction: column;
     }
+
 }
